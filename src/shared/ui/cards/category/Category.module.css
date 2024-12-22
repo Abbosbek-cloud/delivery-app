@@ -1,0 +1,25 @@
+.category__card {
+  border-color: #e86a12;
+  width: 90px;
+  height: 109px;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category__card__image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.category__card__text {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 800;
+  text-align: center;
+}

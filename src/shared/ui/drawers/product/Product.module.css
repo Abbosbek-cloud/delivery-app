@@ -1,0 +1,25 @@
+.drawer__title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+}
+
+.drawer__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.drawer__footer__button {
+  border-radius: 8px;
+  flex: 1;
+  background-color: #e86a12;
+  height: 33px;
+  &:hover {
+    background-color: #e86a12;
+  }
+}

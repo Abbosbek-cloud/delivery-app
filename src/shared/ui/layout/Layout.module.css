@@ -1,0 +1,35 @@
+.layout__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100dvw;
+  padding: 1rem;
+}
+
+.layout__header {
+}
+
+.layout__header__menu {
+  background-color: inherit;
+  :hover {
+    background-color: inherit !important;
+  }
+}
+
+.layout__header__location {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :hover {
+    background-color: inherit !important;
+  }
+}
+
+.layout__main {
+  padding-top: 1rem;
+}
+
+.layout__footer {
+  padding: 1rem;
+}
