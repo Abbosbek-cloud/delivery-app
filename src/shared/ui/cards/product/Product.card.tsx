@@ -26,15 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <Image
         src={product.image}
         alt={product.name}
-        pos="absolute"
-        left="-134px"
-        top={0}
-        width="115px"
-        height="100%"
-        fit="contain"
-        style={{
-          objectFit: "contain",
-        }}
+        className={classes.card__image}
       />
       <Stack className={classes.card__body}>
         <Text className={classes.card__body__name}>{product.name}</Text>

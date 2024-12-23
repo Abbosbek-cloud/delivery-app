@@ -26,6 +26,11 @@
   }
 }
 
+.layout__header {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .layout__main {
   padding-top: 1rem;
 }

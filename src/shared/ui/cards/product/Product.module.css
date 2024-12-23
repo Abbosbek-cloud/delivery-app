@@ -17,6 +17,15 @@
   gap: 10px !important;
 }
 
+.card__image {
+  width: 97px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  left: 15px;
+}
+
 .card__body__name {
   font-size: 20px;
   line-height: 20px;

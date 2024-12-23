@@ -1,22 +1,33 @@
-import {
-  ActionIcon,
-  Group,
-  Select,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
+import { Group, Select, Stack, Text, UnstyledButton } from "@mantine/core";
 import classes from "./Layout.module.css";
 import {
   IconCaretDownFilled,
-  IconLocation,
   IconMapPinFilled,
   IconMenu4,
 } from "@tabler/icons-react";
 import { useState } from "react";
+import { useSearchParams } from "react-router";
+import MainmenuDrawer from "../drawers/main/Mainmenu.drawer";
 
 const HeaderComponent = () => {
   const [type, setType] = useState("delivery");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const is_menu_open = Boolean(searchParams.get("main_menu"));
+
+  const handleOpenMenuDrawer = () => {
+    setSearchParams((prev) => {
+      prev.set("main_menu", "open");
+      return prev;
+    });
+  };
+
+  const handleCloseMenuDrawer = () => {
+    setSearchParams((prev) => {
+      prev.delete("main_menu");
+      return prev;
+    });
+  };
   return (
     <Stack
       pos="sticky"
@@ -26,12 +37,13 @@ const HeaderComponent = () => {
       gap="16.5px"
       style={{ zIndex: 100 }}
     >
-      <Group className={classes.layout__header} justify="space-between">
+      <Group className={classes.layout__header}>
         <Group gap="12px">
           <UnstyledButton
             w={20}
             h={20}
             className={classes.layout__header__menu}
+            onClick={handleOpenMenuDrawer}
           >
             <IconMenu4 color="#121212" />
           </UnstyledButton>
@@ -84,6 +96,7 @@ const HeaderComponent = () => {
           <IconMapPinFilled color="#e86a12" size="16px" />
         </UnstyledButton>
       </Group>
+      <MainmenuDrawer opened={is_menu_open} onClose={handleCloseMenuDrawer} />
     </Stack>
   );
 };

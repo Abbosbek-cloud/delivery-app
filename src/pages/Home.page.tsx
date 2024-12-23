@@ -14,7 +14,6 @@ const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleOpenDrawer = (productId: number) => {
-    console.log("productId", productId);
     setSearchParams((prev) => {
       prev.set("productId", productId.toString());
       return prev;
