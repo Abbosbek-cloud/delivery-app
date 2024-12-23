@@ -7,3 +7,9 @@
     rgba(255, 255, 255, 0) 97.38%
   );
 }
+
+.icon__shopping_cart {
+  & path:nth-child(1) {
+    fill: #e86a12;
+  }
+}

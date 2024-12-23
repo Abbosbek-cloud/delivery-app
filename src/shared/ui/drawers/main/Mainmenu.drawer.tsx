@@ -32,7 +32,7 @@ const MainmenuDrawer: React.FC<IMainmenuDrawerProps> = (props) => {
         <NavLink
           component="button"
           label={<Text fw={600}>Profile</Text>}
-          leftSection={<IconUserCircle stroke={2} />}
+          leftSection={<IconUserCircle stroke={2} color="#E86A12" />}
           classNames={{
             root: classes.menu__navlink,
           }}
@@ -40,7 +40,13 @@ const MainmenuDrawer: React.FC<IMainmenuDrawerProps> = (props) => {
         <NavLink
           component="button"
           label={<Text fw={600}>Orders</Text>}
-          leftSection={<IconStackForward stroke={2} />}
+          leftSection={
+            <IconStackForward
+              stroke={2}
+              color="#E86A12"
+              className={classes.icon__shopping_cart}
+            />
+          }
           classNames={{
             root: classes.menu__navlink,
           }}
@@ -48,7 +54,7 @@ const MainmenuDrawer: React.FC<IMainmenuDrawerProps> = (props) => {
         <NavLink
           component="button"
           label={<Text fw={600}>Cart</Text>}
-          leftSection={<IconShoppingCart stroke={2} />}
+          leftSection={<IconShoppingCart stroke={2} color="#E86A12" />}
           rightSection={
             <Badge size="sm" radius="lg" color="red">
               <Text size="sm">1</Text>
@@ -61,7 +67,7 @@ const MainmenuDrawer: React.FC<IMainmenuDrawerProps> = (props) => {
         <NavLink
           component="button"
           label={<Text fw={600}>Settings</Text>}
-          leftSection={<IconSettings stroke={2} />}
+          leftSection={<IconSettings stroke={2} color="#E86A12" />}
           classNames={{
             root: classes.menu__navlink,
           }}

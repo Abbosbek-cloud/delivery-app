@@ -582,6 +582,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pbe/react-yandex-maps@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "@pbe/react-yandex-maps@npm:1.2.5"
+  dependencies:
+    "@types/yandex-maps": "npm:2.1.29"
+  peerDependencies:
+    react: ^16.x || ^17.x || ^18.x
+  checksum: 10c0/c09088bf582d745e4665c1059c996ece8e48490d408bc16dfd7b925d9fffb30387ef5d6b79858e4ad617439ce06449f9f10ead774851d910966ae3136bf52ce1
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -845,6 +856,13 @@ __metadata:
   version: 0.0.6
   resolution: "@types/use-sync-external-store@npm:0.0.6"
   checksum: 10c0/77c045a98f57488201f678b181cccd042279aff3da34540ad242f893acc52b358bd0a8207a321b8ac09adbcef36e3236944390e2df4fcedb556ce7bb2a88f2a8
+  languageName: node
+  linkType: hard
+
+"@types/yandex-maps@npm:2.1.29":
+  version: 2.1.29
+  resolution: "@types/yandex-maps@npm:2.1.29"
+  checksum: 10c0/06accdb701b71f60b9da87156a3edf9256aed417ea713adeae52a8d67ec21dcf1ec012606b60d6d40dc491a005c68b36dde612c660b7bde28e199b67393bbdae
   languageName: node
   linkType: hard
 
@@ -1277,11 +1295,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.17.1
-  resolution: "fastq@npm:1.17.1"
+  version: 1.18.0
+  resolution: "fastq@npm:1.18.0"
   dependencies:
     reusify: "npm:^1.0.4"
-  checksum: 10c0/1095f16cea45fb3beff558bb3afa74ca7a9250f5a670b65db7ed585f92b4b48381445cd328b3d87323da81e43232b5d5978a8201bde84e0cd514310f1ea6da34
+  checksum: 10c0/7be87ecc41762adbddf558d24182f50a4b1a3ef3ee807d33b7623da7aee5faecdcc94fce5aa13fe91df93e269f383232bbcdb2dc5338cd1826503d6063221f36
   languageName: node
   linkType: hard
 
@@ -2577,6 +2595,7 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:7.15.1"
     "@mantine/hooks": "npm:7.15.1"
+    "@pbe/react-yandex-maps": "npm:^1.2.5"
     "@reduxjs/toolkit": "npm:^2.5.0"
     "@tabler/icons-react": "npm:^3.26.0"
     "@types/react": "npm:^18.3.12"
