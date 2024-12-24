@@ -8,12 +8,14 @@ import {
 import { useState } from "react";
 import { useSearchParams } from "react-router";
 import MainmenuDrawer from "../drawers/main/Mainmenu.drawer";
+import { LocationDrawer } from "../drawers";
 
 const HeaderComponent = () => {
   const [type, setType] = useState("delivery");
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const is_menu_open = Boolean(searchParams.get("main_menu"));
+  const is_menu_open = searchParams.has("main_menu");
+  const is_location_drawer_opened = searchParams.has("location");
 
   const handleOpenMenuDrawer = () => {
     setSearchParams((prev) => {
@@ -28,6 +30,21 @@ const HeaderComponent = () => {
       return prev;
     });
   };
+
+  const handleOpenLocationDrawer = () => {
+    setSearchParams((prev) => {
+      prev.set("location", "open");
+      return prev;
+    });
+  };
+
+  const handleCloseLocationDrawer = () => {
+    setSearchParams((prev) => {
+      prev.delete("location");
+      return prev;
+    });
+  };
+
   return (
     <Stack
       pos="sticky"
@@ -84,6 +101,7 @@ const HeaderComponent = () => {
         bg="#FFF1E7"
         style={{ borderRadius: "4px", cursor: "pointer", border: "none" }}
         component="button"
+        onClick={handleOpenLocationDrawer}
       >
         <Text fz="14px" lh="14px" fw={700}>
           29 Hola street, California, USA
@@ -97,6 +115,10 @@ const HeaderComponent = () => {
         </UnstyledButton>
       </Group>
       <MainmenuDrawer opened={is_menu_open} onClose={handleCloseMenuDrawer} />
+      <LocationDrawer
+        opened={is_location_drawer_opened}
+        onClose={handleCloseLocationDrawer}
+      />
     </Stack>
   );
 };
